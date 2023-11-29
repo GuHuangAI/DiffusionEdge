@@ -2,8 +2,6 @@
 [Yunfan Ye](https://yunfan1202.github.io), [Yuhang Huang](https://github.com/GuHuangAI), [Renjiao Yi](https://renjiaoyi.github.io/), [Zhiping Cai](), [Kai Xu](http://kevinkaixu.net/index.html).
 
 ![Teaser](assets/teaser.png)
-
-![](assets/denoising_process/2018/test.gif)
 ![](assets/denoising_process/3063/test.gif)
 ![](assets/denoising_process/5096/test.gif)
 
