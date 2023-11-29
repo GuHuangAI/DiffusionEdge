@@ -3,9 +3,9 @@
 
 ![Teaser](assets/teaser.png)
 
-[](assets/denoising_process/2018/test.gif)
-[](assets/denoising_process/3063/test.gif)
-[](assets/denoising_process/5096/test.gif)
+![](assets/denoising_process/2018/test.gif)
+![](assets/denoising_process/3063/test.gif)
+![](assets/denoising_process/5096/test.gif)
 
 # News
 - First Committed. 
