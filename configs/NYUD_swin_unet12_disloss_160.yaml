@@ -1,0 +1,85 @@
+model:
+  model_type: const_sde4
+  model_name: cond_unet12
+  image_size: [160, 160]
+  input_keys: ['image', 'cond']
+  ckpt_path:
+  ignore_keys: [ ]
+  only_model: False
+  timesteps: 1000
+  train_sample: -1
+  sampling_timesteps: 10
+  loss_type: l2
+  objective: pred_KC
+  start_dist: normal
+  perceptual_weight: 0
+  scale_factor: 0.5
+  scale_by_std: True
+  default_scale: True
+  scale_by_softsign: False
+  eps: !!float 1e-4
+  weighting_loss: True
+  use_disloss: True
+
+  first_stage:
+    embed_dim: 3
+    lossconfig:
+      disc_start: 50001
+      kl_weight: 0.000001
+      disc_weight: 0.5
+      disc_in_channels: 1
+    ddconfig:
+      double_z: True
+      z_channels: 3
+      resolution: [ 160, 160 ]
+      in_channels: 1
+      out_ch: 1
+      ch: 128
+      ch_mult: [1, 2, 4]  # num_down = len(ch_mult)-1
+      num_res_blocks: 2
+      attn_resolutions: [ ]
+      dropout: 0.0
+    ckpt_path: "/data/huang/diffusion_edge/checkpoints/first_stage_160/model-10.pt"
+
+  unet:
+    dim: 128
+    cond_net: swin
+    fix_bb: False
+    channels: 3
+    out_mul: 1
+    dim_mults: [ 1, 2, 4, 4, ] # num_down = len(dim_mults)
+    cond_in_dim: 3
+    cond_dim: 128
+    cond_dim_mults: [ 2, 4 ] # num_down = len(cond_dim_mults)
+    #    window_sizes1: [ [4, 4], [2, 2], [1, 1], [1, 1] ]
+    #    window_sizes2: [ [4, 4], [2, 2], [1, 1], [1, 1] ]
+    window_sizes1: [ [ 8, 8 ], [ 4, 4 ], [ 2, 2 ], [ 1, 1 ] ]
+    window_sizes2: [ [ 8, 8 ], [ 4, 4 ], [ 2, 2 ], [ 1, 1 ] ]
+    fourier_scale: 16
+    cond_pe: False
+    num_pos_feats: 128
+    cond_feature_size: [ 40, 40 ]
+    input_size: [40, 40]
+
+data:
+  name: edge
+  crop_type: rand_crop
+  img_folder: '/data/yeyunfan/edge_detection_datasets/datasets/NYUD_100%/train'
+  augment_horizontal_flip: True
+  batch_size: 16
+  num_workers: 8
+
+trainer:
+  gradient_accumulate_every: 1
+  lr: !!float 5e-5
+  min_lr: !!float 5e-6
+  train_num_steps: 100000
+  save_and_sample_every: 5000
+  log_freq: 1000
+  results_folder: "/data/huang/diffusion_edge/checkpoints/NYUD_swin_unet12_no_resize_disloss_160"
+  amp: False
+  fp16: False
+  resume_milestone: 1
+  test_before: True
+  ema_update_after_step: 10000
+  ema_update_every: 10

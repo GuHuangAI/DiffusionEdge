@@ -1,0 +1,23 @@
+#torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+accelerate
+einops
+ema-pytorch
+pytorch-lightning
+scikit-learn
+scipy
+thop
+timm
+tensorboard
+fvcore
+albumentations
+omegaconf
+ninja
+#tensorflow==2.5.0
+#tensorflow-probability==0.13.0
+#tensorflow-gan==2.0.0
+#tensorflow-datasets==3.1.0
+#tensorflow_io
+#tensorflow-addons==0.12.0
+#jax==0.4.6
+#jaxlib==0.4.6
+numpy==1.23.5
