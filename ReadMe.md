@@ -1,11 +1,14 @@
 ## DiffusionEdge: Diffusion Probabilistic Model for Crisp Edge Detection  ([arxiv]())
+[Yunfan Ye](https://yunfan1202.github.io), [Yuhang Huang](https://github.com/GuHuangAI), [Renjiao Yi](https://renjiaoyi.github.io/), [Zhiping Cai](), [Kai Xu](http://kevinkaixu.net/index.html).
+
 ![Teaser](assets/teaser.png)
 
-## Framework
-![Framework](assets/framework.png)
+[](assets/denoising_process/2018/test.gif)
+[](assets/denoising_process/3063/test.gif)
+[](assets/denoising_process/5096/test.gif)
 
 # News
-- First Committed.
+- First Committed. 
 
 ## I. Before Starting.
 1. install torch
@@ -70,7 +73,7 @@ python sample_cond_ldm.py --cfg ./configs/BSDS_swin_randresize_sample.yaml
 ## Concat
 If you have some questions, please concat with huangai@nudt.edu.cn.
 ## Thanks
-Thanks to the co-first author [Yunfan Ye](https://github.com/yunfan1202).
+Thanks to the base code [DDM-Public](https://github.com/GuHuangAI/DDM-Public).
 ## Citation
 ~~~
 waiting for updating
