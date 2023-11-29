@@ -43,48 +43,15 @@ def main(args):
         ckpt_path=model_cfg['ckpt_path'],
     )
     data_cfg = cfg["data"]
-    if data_cfg['name'] == 'cifar10':
-        dataset = CIFAR10(
-            img_folder=data_cfg['img_folder'],
-            image_size=model_cfg['ddconfig']['resolution'],
-            augment_horizontal_flip=data_cfg['augment_horizontal_flip']
-        )
-    elif data_cfg['name'] == 'lsun':
-        dataset = LSUNDataset(
-            img_folder=data_cfg['img_folder'],
-            image_size=model_cfg['ddconfig']['resolution'],
-            augment_horizontal_flip=data_cfg['augment_horizontal_flip']
-        )
-    elif data_cfg['name'] == 'cityscapes':
-        dataset = CityscapesDataset(
-            data_root=data_cfg['img_folder'],
-            image_size=model_cfg['ddconfig']['resolution'],
-            augment_horizontal_flip=data_cfg['augment_horizontal_flip']
-        )
-    elif data_cfg['name'] == 'ade20k':
-        dataset = ADE20KDataset(
-            data_root=data_cfg['img_folder'],
-            image_size=model_cfg['ddconfig']['resolution'],
-            augment_horizontal_flip=data_cfg['augment_horizontal_flip']
-        )
-    elif data_cfg['name'] == 'sr':
-        dataset = SRDataset(
-            img_folder=data_cfg['img_folder'],
-            image_size=model_cfg['ddconfig']['resolution'],
-            augment_horizontal_flip=data_cfg['augment_horizontal_flip'],
-        )
-    elif data_cfg['name'] == 'edge':
+    if data_cfg['name'] == 'edge':
         dataset = EdgeDataset(
             data_root=data_cfg['img_folder'],
             image_size=model_cfg['ddconfig']['resolution'],
             augment_horizontal_flip=data_cfg['augment_horizontal_flip'],
         )
     else:
-        dataset = ImageDataset(
-            img_folder=data_cfg['img_folder'],
-            image_size=model_cfg['ddconfig']['resolution'],
-            augment_horizontal_flip=data_cfg['augment_horizontal_flip']
-        )
+        raise NotImplementedError
+
     dl = DataLoader(dataset, batch_size=data_cfg['batch_size'], shuffle=True, pin_memory=True,
                     num_workers=2)
     train_cfg = cfg['trainer']

@@ -11,13 +11,4 @@ tensorboard
 fvcore
 albumentations
 omegaconf
-ninja
-#tensorflow==2.5.0
-#tensorflow-probability==0.13.0
-#tensorflow-gan==2.0.0
-#tensorflow-datasets==3.1.0
-#tensorflow_io
-#tensorflow-addons==0.12.0
-#jax==0.4.6
-#jaxlib==0.4.6
 numpy==1.23.5
