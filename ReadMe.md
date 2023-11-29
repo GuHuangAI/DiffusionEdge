@@ -1,9 +1,8 @@
-# DDM
-## Decoupled Diffusion Models: Image to Zero and Zero to Noise ([arxiv](https://arxiv.org/abs/2306.13720))
-![Teaser](assets/teaser.pdf)
+## DiffusionEdge: Diffusion Probabilistic Model for Crisp Edge Detection  ([arxiv]()
+![Teaser](assets/teaser.png)
 
 ## Framework
-![Framework](assets/framework-1.pdf)
+![Framework](assets/framework.png)
 
 # News
 - We now update training for text-2-img, please refer to [text-2-img](#viii-training-for-text-2-iamge).
