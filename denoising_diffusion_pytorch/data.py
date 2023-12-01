@@ -16,11 +16,7 @@ import os
 import pickle
 import numpy as np
 import copy
-# import jax
-# import tensorflow_datasets as tfds
-# import tensorflow as tf
 import albumentations
-from image_degradation import degradation_fn_bsr
 from torchvision.transforms.functional import InterpolationMode
 
 def get_imgs_list(imgs_dir):
