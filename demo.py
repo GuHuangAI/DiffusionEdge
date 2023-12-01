@@ -30,6 +30,7 @@ def parse_args():
     parser.add_argument("--cfg", help="experiment configure file name", type=str, required=True, default="./configs/default.yaml")
     parser.add_argument("--input_dir", help='input directory', type=str, required=True)
     parser.add_argument("--pre_weight", help='path of pretrained weight', type=str, required=True)
+    parser.add_argument("--sampling_timesteps", help='sampling timesteps', type=int, default=1)
     parser.add_argument("--out_dir", help='output directory', type=str, required=True)
     args = parser.parse_args()
     args.cfg = load_conf(args.cfg)
@@ -80,7 +81,7 @@ def main(args):
         train_sample=model_cfg.train_sample,
         image_size=model_cfg.image_size,
         timesteps=model_cfg.timesteps,
-        sampling_timesteps=model_cfg.sampling_timesteps,
+        sampling_timesteps=args.sampling_timesteps,
         loss_type=model_cfg.loss_type,
         objective=model_cfg.objective,
         scale_factor=model_cfg.scale_factor,
