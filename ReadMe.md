@@ -40,11 +40,11 @@ The data structure should look like:
 ## III. Quickly Demo !
 1. download the pretrained weights:  
 
-| Dataset | ODS   | OIS   | AC    | Weight       |
-|---------|-------|-------|-------|--------------|
-| BSDS    | 0.834 | 0.848 | 0.476 | [download]() |
-| BIPED   | 0.899 | 0.901 | 0.849 | [download]() |
-| NYUD    | 0.761 | 0.766 | 0.846 | [download]() |
+| Dataset | ODS (<font color=blue>SEval</font>/<font color=green>CEval</font>) | OIS (<font color=blue>SEval</font>/<font color=green>CEval</font>) | AC    | Weight       |
+|---------|--------------------------------------------------------------------|--------------------------------------------------------------------|-------|--------------|
+| BSDS    | <font color=blue>0.834</font> / <font color=green>0.749</font>     | <font color=blue>0.848</font> / <font color=green>0.754</font>     | 0.476 | [download]() |
+| NYUD    | <font color=blue>0.761</font> / <font color=green>0.732</font>     | <font color=blue>0.766</font> / <font color=green>0.738</font>     | 0.846 | [download]() |\
+| BIPED   | <font color=blue>0.899</font>                                      | <font color=blue>0.901</font>                                      | 0.849 | [download]() |
 
 2. put your images in a directory and run:
 ~~~
