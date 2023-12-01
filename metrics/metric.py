@@ -320,7 +320,7 @@ def calculate_metrics(**kwargs):
         elif model_cfg.model_type == 'const_sde3':
             from denoising_diffusion_pytorch.etp_dpm_const_sde3 import DDPM
         elif model_cfg.model_type == 'const_sde4':
-            from denoising_diffusion_pytorch.etp_dpm_const_sde4 import DDPM
+            from denoising_diffusion_pytorch.ddm_const_sde import DDPM
         elif model_cfg.model_type == 'linear_sde':
             from denoising_diffusion_pytorch.etp_dpm_linear_sde import DDPM
         elif model_cfg.model_type == '2order_sde':
@@ -365,7 +365,7 @@ def calculate_metrics(**kwargs):
         elif model_cfg.model_type == '2order_rec':
             from denoising_diffusion_pytorch.etp_ldm_2order_rec import LatentDiffusion
         elif model_cfg.model_type == 'const_sde4':
-            from denoising_diffusion_pytorch.etp_dpm_const_sde4 import LatentDiffusion
+            from denoising_diffusion_pytorch.ddm_const_sde import LatentDiffusion
         elif model_cfg.model_type == 'linear_sde':
             from denoising_diffusion_pytorch.etp_dpm_linear_sde import LatentDiffusion
         elif model_cfg.model_type == '2order_sde':

@@ -1,6 +1,6 @@
 model:
-  model_type: diffusion
-  model_name: cond_unet14
+  model_type: const_sde
+  model_name: cond_unet
   image_size: [320, 320]
   input_keys: ['image', 'cond']
   ckpt_path:
@@ -8,7 +8,7 @@ model:
   only_model: False
   timesteps: 1000
   train_sample: -1
-  sampling_timesteps: 300
+  sampling_timesteps: 5
   loss_type: l2
   objective: pred_noise
   start_dist: normal
@@ -69,5 +69,5 @@ sampler:
   batch_size: 1
   sample_num: 300
   use_ema: True
-  save_folder: "/data/huang/diffusion_edge/checkpoints/BSDS_swin_unet12_diffusion/results_model12_stride240_step300"
-  ckpt_path: "/data/huang/diffusion_edge/checkpoints/BSDS_swin_unet12_diffusion/model-12.pt"
+  save_folder: "/data/huang/diffusion_edge/checkpoints/BSDS_swin_unet12_disloss_bs2x8/results_model4_test_step"
+  ckpt_path: "/data/huang/diffusion_edge/checkpoints/BSDS_swin_unet12_disloss_bs2x8/model-4.pt"

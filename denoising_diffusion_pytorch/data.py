@@ -267,8 +267,8 @@ class EdgeDataset(data.Dataset):
 
     def build_list(self):
         data_root = os.path.abspath(self.data_root)
-        images_path = os.path.join(data_root, 'image', "raw")
-        labels_path = os.path.join(data_root, 'edge', "raw")
+        images_path = os.path.join(data_root, 'image')
+        labels_path = os.path.join(data_root, 'edge')
 
         samples = []
         for directory_name in os.listdir(images_path):

@@ -51,9 +51,6 @@ def main(args):
     cfg = CfgNode(args.cfg)
     torch.manual_seed(42)
     np.random.seed(42)
-    # random.seed(seed)
-    # logger = create_logger(root_dir=cfg['out_path'])
-    # writer = SummaryWriter(cfg['out_path'])
     model_cfg = cfg.model
     first_stage_cfg = model_cfg.first_stage
     first_stage_model = AutoencoderKL(
@@ -62,220 +59,9 @@ def main(args):
         embed_dim=first_stage_cfg.embed_dim,
         ckpt_path=first_stage_cfg.ckpt_path,
     )
-    # unet_cfg = model_cfg.transmodel
-    # unet = TransModel(dim=unet_cfg.dim,
-    #             channels=unet_cfg.channels,
-    #             encoder_layers=unet_cfg.encoder_layers,
-    #             decoder_layers=unet_cfg.decoder_layers,
-    #             patch_size=unet_cfg.patch_size,
-    #             cond_in_dim=unet_cfg.cond_in_dim,
-    #             cond_dim=unet_cfg.cond_dim,
-    #             cond_dim_mults=unet_cfg.cond_dim_mults,
-    #             spatial_size=unet_cfg.spatial_size,
-    #             num_groups=unet_cfg.num_groups,
-    #             learned_variance=unet_cfg.learned_variance,
-    #             )
-    if model_cfg.model_name == 'ncsnpp':
-        unet_cfg = model_cfg.ncsnpp
-        from unet_plus.ncsnpp import NCSNpp
-        unet = NCSNpp(unet_cfg)
-    elif model_cfg.model_name == 'ncsnpp2':
-        unet_cfg = model_cfg.ncsnpp
-        from unet_plus.ncsnpp2 import NCSNpp
-        unet = NCSNpp(unet_cfg)
-    elif model_cfg.model_name == 'ncsnpp3':
-        unet_cfg = model_cfg.ncsnpp
-        from unet_plus.ncsnpp3 import NCSNpp
-        unet = NCSNpp(unet_cfg)
-    elif model_cfg.model_name == 'ncsnpp4':
-        unet_cfg = model_cfg.ncsnpp
-        from unet_plus.ncsnpp4 import NCSNpp
-        unet = NCSNpp(unet_cfg)
-    elif model_cfg.model_name == 'ncsnpp5':
-        unet_cfg = model_cfg.ncsnpp
-        from unet_plus.ncsnpp5 import NCSNpp
-        unet = NCSNpp(unet_cfg)
-    elif model_cfg.model_name == 'ncsnpp6':
-        unet_cfg = model_cfg.ncsnpp
-        from unet_plus.ncsnpp6 import NCSNpp
-        unet = NCSNpp(unet_cfg)
-    elif model_cfg.model_name == 'cond_unet3':
-        from denoising_diffusion_pytorch.mask_cond_unet3 import Unet
-        unet_cfg = model_cfg.unet
-        unet = Unet(dim=unet_cfg.dim,
-                    channels=unet_cfg.channels,
-                    dim_mults=unet_cfg.dim_mults,
-                    learned_variance=unet_cfg.get('learned_variance', False),
-                    out_mul=unet_cfg.out_mul,
-                    cond_in_dim=unet_cfg.cond_in_dim,
-                    cond_dim=unet_cfg.cond_dim,
-                    cond_dim_mults=unet_cfg.cond_dim_mults,
-                    window_sizes1=unet_cfg.window_sizes1,
-                    window_sizes2=unet_cfg.window_sizes2,
-                    fourier_scale=unet_cfg.fourier_scale,
-                    )
-    elif model_cfg.model_name == 'cond_unet4':
-        from denoising_diffusion_pytorch.mask_cond_unet4 import Unet
-        unet_cfg = model_cfg.unet
-        unet = Unet(dim=unet_cfg.dim,
-                    channels=unet_cfg.channels,
-                    dim_mults=unet_cfg.dim_mults,
-                    learned_variance=unet_cfg.get('learned_variance', False),
-                    out_mul=unet_cfg.out_mul,
-                    cond_in_dim=unet_cfg.cond_in_dim,
-                    cond_dim=unet_cfg.cond_dim,
-                    cond_dim_mults=unet_cfg.cond_dim_mults,
-                    window_sizes1=unet_cfg.window_sizes1,
-                    window_sizes2=unet_cfg.window_sizes2,
-                    fourier_scale=unet_cfg.fourier_scale,
-                    cfg=unet_cfg,
-                    )
-    elif model_cfg.model_name == 'cond_unet5':
-        from denoising_diffusion_pytorch.mask_cond_unet5 import Unet
-        unet_cfg = model_cfg.unet
-        unet = Unet(dim=unet_cfg.dim,
-                    channels=unet_cfg.channels,
-                    dim_mults=unet_cfg.dim_mults,
-                    learned_variance=unet_cfg.get('learned_variance', False),
-                    out_mul=unet_cfg.out_mul,
-                    cond_in_dim=unet_cfg.cond_in_dim,
-                    cond_dim=unet_cfg.cond_dim,
-                    cond_dim_mults=unet_cfg.cond_dim_mults,
-                    window_sizes1=unet_cfg.window_sizes1,
-                    window_sizes2=unet_cfg.window_sizes2,
-                    fourier_scale=unet_cfg.fourier_scale,
-                    cfg=unet_cfg,
-                    )
-    elif model_cfg.model_name == 'cond_unet6':
-        from denoising_diffusion_pytorch.mask_cond_unet6 import Unet
-        unet_cfg = model_cfg.unet
-        unet = Unet(dim=unet_cfg.dim,
-                    channels=unet_cfg.channels,
-                    dim_mults=unet_cfg.dim_mults,
-                    learned_variance=unet_cfg.get('learned_variance', False),
-                    out_mul=unet_cfg.out_mul,
-                    cond_in_dim=unet_cfg.cond_in_dim,
-                    cond_dim=unet_cfg.cond_dim,
-                    cond_dim_mults=unet_cfg.cond_dim_mults,
-                    window_sizes1=unet_cfg.window_sizes1,
-                    window_sizes2=unet_cfg.window_sizes2,
-                    fourier_scale=unet_cfg.fourier_scale,
-                    cfg=unet_cfg,
-                    )
-    elif model_cfg.model_name == 'cond_unet7':
-        from denoising_diffusion_pytorch.mask_cond_unet7 import Unet
-        unet_cfg = model_cfg.unet
-        unet = Unet(dim=unet_cfg.dim,
-                    channels=unet_cfg.channels,
-                    dim_mults=unet_cfg.dim_mults,
-                    learned_variance=unet_cfg.get('learned_variance', False),
-                    out_mul=unet_cfg.out_mul,
-                    cond_in_dim=unet_cfg.cond_in_dim,
-                    cond_dim=unet_cfg.cond_dim,
-                    cond_dim_mults=unet_cfg.cond_dim_mults,
-                    window_sizes1=unet_cfg.window_sizes1,
-                    window_sizes2=unet_cfg.window_sizes2,
-                    fourier_scale=unet_cfg.fourier_scale,
-                    cfg=unet_cfg,
-                    )
-    elif model_cfg.model_name == 'cond_unet8':
-        from denoising_diffusion_pytorch.mask_cond_unet8 import Unet
-        unet_cfg = model_cfg.unet
-        unet = Unet(dim=unet_cfg.dim,
-                    channels=unet_cfg.channels,
-                    dim_mults=unet_cfg.dim_mults,
-                    learned_variance=unet_cfg.get('learned_variance', False),
-                    out_mul=unet_cfg.out_mul,
-                    cond_in_dim=unet_cfg.cond_in_dim,
-                    cond_dim=unet_cfg.cond_dim,
-                    cond_dim_mults=unet_cfg.cond_dim_mults,
-                    window_sizes1=unet_cfg.window_sizes1,
-                    window_sizes2=unet_cfg.window_sizes2,
-                    fourier_scale=unet_cfg.fourier_scale,
-                    cfg=unet_cfg,
-                    )
-    elif model_cfg.model_name == 'cond_unet9':
-        from denoising_diffusion_pytorch.mask_cond_unet9 import Unet
-        unet_cfg = model_cfg.unet
-        unet = Unet(dim=unet_cfg.dim,
-                    channels=unet_cfg.channels,
-                    dim_mults=unet_cfg.dim_mults,
-                    learned_variance=unet_cfg.get('learned_variance', False),
-                    out_mul=unet_cfg.out_mul,
-                    cond_in_dim=unet_cfg.cond_in_dim,
-                    cond_dim=unet_cfg.cond_dim,
-                    cond_dim_mults=unet_cfg.cond_dim_mults,
-                    window_sizes1=unet_cfg.window_sizes1,
-                    window_sizes2=unet_cfg.window_sizes2,
-                    fourier_scale=unet_cfg.fourier_scale,
-                    cfg=unet_cfg,
-                    )
-    elif model_cfg.model_name == 'cond_unet10':
-        from denoising_diffusion_pytorch.mask_cond_unet10 import Unet
-        unet_cfg = model_cfg.unet
-        unet = Unet(dim=unet_cfg.dim,
-                    channels=unet_cfg.channels,
-                    dim_mults=unet_cfg.dim_mults,
-                    learned_variance=unet_cfg.get('learned_variance', False),
-                    out_mul=unet_cfg.out_mul,
-                    cond_in_dim=unet_cfg.cond_in_dim,
-                    cond_dim=unet_cfg.cond_dim,
-                    cond_dim_mults=unet_cfg.cond_dim_mults,
-                    window_sizes1=unet_cfg.window_sizes1,
-                    window_sizes2=unet_cfg.window_sizes2,
-                    fourier_scale=unet_cfg.fourier_scale,
-                    cfg=unet_cfg,
-                    )
-    elif model_cfg.model_name == 'cond_unet11':
-        from denoising_diffusion_pytorch.mask_cond_unet11 import Unet
-        unet_cfg = model_cfg.unet
-        unet = Unet(dim=unet_cfg.dim,
-                    channels=unet_cfg.channels,
-                    dim_mults=unet_cfg.dim_mults,
-                    learned_variance=unet_cfg.get('learned_variance', False),
-                    out_mul=unet_cfg.out_mul,
-                    cond_in_dim=unet_cfg.cond_in_dim,
-                    cond_dim=unet_cfg.cond_dim,
-                    cond_dim_mults=unet_cfg.cond_dim_mults,
-                    window_sizes1=unet_cfg.window_sizes1,
-                    window_sizes2=unet_cfg.window_sizes2,
-                    fourier_scale=unet_cfg.fourier_scale,
-                    cfg=unet_cfg,
-                    )
-    elif model_cfg.model_name == 'cond_unet12':
-        from denoising_diffusion_pytorch.mask_cond_unet12 import Unet
-        unet_cfg = model_cfg.unet
-        unet = Unet(dim=unet_cfg.dim,
-                    channels=unet_cfg.channels,
-                    dim_mults=unet_cfg.dim_mults,
-                    learned_variance=unet_cfg.get('learned_variance', False),
-                    out_mul=unet_cfg.out_mul,
-                    cond_in_dim=unet_cfg.cond_in_dim,
-                    cond_dim=unet_cfg.cond_dim,
-                    cond_dim_mults=unet_cfg.cond_dim_mults,
-                    window_sizes1=unet_cfg.window_sizes1,
-                    window_sizes2=unet_cfg.window_sizes2,
-                    fourier_scale=unet_cfg.fourier_scale,
-                    cfg=unet_cfg,
-                    )
-    elif model_cfg.model_name == 'cond_unet13':
-        from denoising_diffusion_pytorch.mask_cond_unet13 import Unet
-        unet_cfg = model_cfg.unet
-        unet = Unet(dim=unet_cfg.dim,
-                    channels=unet_cfg.channels,
-                    dim_mults=unet_cfg.dim_mults,
-                    learned_variance=unet_cfg.get('learned_variance', False),
-                    out_mul=unet_cfg.out_mul,
-                    cond_in_dim=unet_cfg.cond_in_dim,
-                    cond_dim=unet_cfg.cond_dim,
-                    cond_dim_mults=unet_cfg.cond_dim_mults,
-                    window_sizes1=unet_cfg.window_sizes1,
-                    window_sizes2=unet_cfg.window_sizes2,
-                    fourier_scale=unet_cfg.fourier_scale,
-                    cfg=unet_cfg,
-                    )
-    elif model_cfg.model_name == 'cond_unet14':
-        from denoising_diffusion_pytorch.mask_cond_unet14 import Unet
+
+    if model_cfg.model_name == 'cond_unet':
+        from denoising_diffusion_pytorch.mask_cond_unet import Unet
         unet_cfg = model_cfg.unet
         unet = Unet(dim=unet_cfg.dim,
                     channels=unet_cfg.channels,
@@ -291,28 +77,9 @@ def main(args):
                     cfg=unet_cfg,
                     )
     else:
-        from denoising_diffusion_pytorch.mask_cond_unet2 import Unet
-        unet_cfg = model_cfg.unet
-        unet = Unet(dim=unet_cfg.dim,
-                    channels=unet_cfg.channels,
-                    dim_mults=unet_cfg.dim_mults,
-                    learned_variance=unet_cfg.get('learned_variance', False),
-                    out_mul=unet_cfg.out_mul,
-                    cond_in_dim=unet_cfg.cond_in_dim,
-                    cond_dim=unet_cfg.cond_dim,
-                    cond_dim_mults=unet_cfg.cond_dim_mults,
-                    window_sizes1=unet_cfg.window_sizes1,
-                    window_sizes2=unet_cfg.window_sizes2,
-                    fourier_scale=unet_cfg.fourier_scale,
-                    )
-    if model_cfg.model_type == 'const_sde4':
-        from denoising_diffusion_pytorch.etp_dpm_const_sde4 import LatentDiffusion
-    elif model_cfg.model_type == 'linear_sde':
-        from denoising_diffusion_pytorch.etp_dpm_linear_sde import LatentDiffusion
-    elif model_cfg.model_type == '2order_sde':
-        from denoising_diffusion_pytorch.etp_dpm_2order_sde import LatentDiffusion
-    elif model_cfg.model_type == 'diffusion':
-        from denoising_diffusion_pytorch.ddpm_sde import LatentDiffusion
+        raise NotImplementedError
+    if model_cfg.model_type == 'const_sde':
+        from denoising_diffusion_pytorch.ddm_const_sde import LatentDiffusion
     else:
         raise NotImplementedError(f'{model_cfg.model_type} is not surportted !')
     ldm = LatentDiffusion(
@@ -348,18 +115,9 @@ def main(args):
         )
         # dataset = torch.utils.data.ConcatDataset([dataset] * 5)
     else:
-        dataset = ImageDataset(
-            img_folder=data_cfg.img_folder,
-            image_size=model_cfg.image_size,
-            augment_horizontal_flip=False
-        )
+        raise NotImplementedError
     dl = DataLoader(dataset, batch_size=cfg.sampler.batch_size, shuffle=False, pin_memory=True,
                     num_workers=data_cfg.get('num_workers', 2))
-    # sample_num = model_cfg.sample_num
-    # batch_size = sampler_cfg.sample_batch_size
-    # batch_num = math.ceil(sample_num // batch_size)
-    # save_dir = Path(cfg.save_folder)
-    # save_dir.mkdir(exist_ok=True, parents=True)
 
 
     sampler_cfg = cfg.sampler
@@ -458,41 +216,15 @@ class Sampler(object):
 
                 mask = batch['ori_mask'] if 'ori_mask' in batch else None
                 bs = cond.shape[0]
-                # if self.rk45:
-                #     batch_pred, nfe = self.rk45_sample(batch_size=bs, cond=cond, mask=mask)
-                # else:
-                #     if isinstance(self.model, nn.parallel.DistributedDataParallel):
-                #         batch_pred = self.model.module.sample(batch_size=bs, cond=cond, mask=mask)
-                #     elif isinstance(self.model, nn.Module):
-                #         batch_pred = self.model.sample(batch_size=bs, cond=cond, mask=mask)
                 if self.cfg.sampler.sample_type == 'whole':
                     batch_pred = self.whole_sample(cond, raw_size=(raw_h, raw_w), mask=mask)
                 elif self.cfg.sampler.sample_type == 'slide':
-                    if self.cfg.model.model_name == 'cond_unet8':
-                        batch_pred, aux_out1, aux_out2 = self.slide_sample(cond, crop_size=(320, 320), stride=self.cfg.sampler.stride, mask=mask)
-                    elif self.cfg.model.model_name == 'cond_unet13':
-                        batch_pred, aux_out1 = self.slide_sample(cond, crop_size=(320, 320), stride=self.cfg.sampler.stride, mask=mask)
-                    else:
-                        batch_pred = self.slide_sample(cond, crop_size=self.cfg.sampler.get('crop_size', [320, 320]), stride=self.cfg.sampler.stride, mask=mask)
-                        aux_out1 = aux_out2 = None
+                    batch_pred = self.slide_sample(cond, crop_size=self.cfg.sampler.get('crop_size', [320, 320]), stride=self.cfg.sampler.stride, mask=mask)
                 else:
                     raise NotImplementedError
-
-
-                # batch_pred = F.interpolate(batch_pred, size=(raw_h, raw_w), mode="bilinear", align_corners=True)
                 for j, (img, c) in enumerate(zip(batch_pred, cond)):
                     file_name = self.results_folder / img_name
                     tv.utils.save_image(img, str(file_name)[:-4] + ".png")
-                    if aux_out1 is not None:
-                        aux_path1 = self.results_folder.parent / (self.results_folder.name + 'aux1')
-                        aux_path1.mkdir(exist_ok=True, parents=True)
-                        # aux_path2 = self.results_folder.parent / (self.results_folder.name + 'aux2')
-                        # aux_path2.mkdir(exist_ok=True, parents=True)
-                        aux_name1 = aux_path1 / img_name
-                        # aux_name2 = aux_path2 / img_name
-                        tv.utils.save_image(aux_out1[j], str(aux_name1)[:-4] + ".png")
-                        # tv.utils.save_image(aux_out2[j], str(aux_name2)[:-4] + ".png")
-            # print('PSNR: ', psnr / num)
         accelerator.print('sampling complete')
 
     # ----------------------------------waiting revision------------------------------------
@@ -535,29 +267,17 @@ class Sampler(object):
                 y1 = max(y2 - h_crop, 0)
                 x1 = max(x2 - w_crop, 0)
                 crop_img = inputs[:, :, y1:y2, x1:x2]
-                # change the image shape to patch shape
-                # batch_img_metas[0]['img_shape'] = crop_img.shape[2:]
-                # the output of encode_decode is seg logits tensor map
-                # with shape [N, C, H, W]
-                # crop_seg_logit = self.encode_decode(crop_img, batch_img_metas)
+
                 if isinstance(self.model, nn.parallel.DistributedDataParallel):
-                    if self.cfg.model.model_name == 'cond_unet8':
-                        crop_seg_logit, (e1, e2) = self.model.module.sample(batch_size=1, cond=crop_img, mask=mask)
-                    elif self.cfg.model.model_name == 'cond_unet13':
-                        crop_seg_logit, aux_out = self.model.module.sample(batch_size=1, cond=crop_img, mask=mask)
-                    else:
-                        crop_seg_logit = self.model.module.sample(batch_size=1, cond=crop_img, mask=mask)
-                        e1 = e2 = None
-                        aux_out = None
+                    crop_seg_logit = self.model.module.sample(batch_size=1, cond=crop_img, mask=mask)
+                    e1 = e2 = None
+                    aux_out = None
                 elif isinstance(self.model, nn.Module):
-                    if self.cfg.model.model_name == 'cond_unet8':
-                        crop_seg_logit, (e1, e2) = self.model.sample(batch_size=1, cond=crop_img, mask=mask)
-                    elif self.cfg.model.model_name == 'cond_unet13':
-                        crop_seg_logit, aux_out = self.model.sample(batch_size=1, cond=crop_img, mask=mask)
-                    else:
-                        crop_seg_logit = self.model.sample(batch_size=1, cond=crop_img, mask=mask)
-                        e1 = e2 = None
-                        aux_out = None
+                    crop_seg_logit = self.model.sample(batch_size=1, cond=crop_img, mask=mask)
+                    e1 = e2 = None
+                    aux_out = None
+                else:
+                    raise NotImplementedError
                 preds += F.pad(crop_seg_logit,
                                (int(x1), int(preds.shape[3] - x2), int(y1),
                                 int(preds.shape[2] - y2)))

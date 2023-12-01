@@ -5,74 +5,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a57fb937-9c67-4f91-826e-8853fd385b4b" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/2018/test.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/3063/test.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/denoising_process/5096/test.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BIPED_af.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BIPED_no_af_no_diss.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BIPED_sample.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/BIPED_sample.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BIPED_sample2.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BIPED_swin_unet12.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BIPED_swin_unet12_disloss.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BIPED_swin_unet12_disloss_160.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BIPED_swin_unet9_af.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BIPED_train.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/BIPED_train.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BIPED_train_first_stage_total.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BIPED_ud.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_ddpm_train.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_sample.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/BSDS_sample.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_sample2.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_swin_randresize.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_swin_randresize_sample.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/default.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/BSDS_train.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_416.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_VGG.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_aug.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_effnet.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_effnet_2xthre.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_effnet_randresize.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_effnet_randresize_aug32.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_first_stage_total.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_resnet.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_swin_randresize_aug32.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_swin_randresize_aug32_fft.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_swin_randresize_aug32_unet8.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_swin_unet10_randresize_aug32_fft.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_swin_unet11_randresize_aug32_wave.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_swin_unet12_160.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_swin_unet12_no_disloss.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_swin_unet12_randresize_aug32_mid_fft.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_swin_unet12_randresize_disloss.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train_swin_unet13_randresize_aug8_mid_fft.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/Multicue_bound_split2.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/Multicue_bound_split3.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/Multicue_split1.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/Multicue_split2.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/Multicue_split3.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/NYUD_af.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/NYUD_no_af_no_diss.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/NYUD_sample.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/NYUD_sample.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/NYUD_sample2.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/NYUD_swin_unet12_disloss.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/NYUD_train.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/NYUD_swin_unet12_disloss_160.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/NYUD_swin_unet12_disloss_aug_resize.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/NYUD_swin_unet12_disloss_resize.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/NYUD_train_first_stage_total.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/NYUD_train_swin.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/NYUD_ud.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/first_stage_d4.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/denoising_diffusion_pytorch/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/denoising_diffusion_pytorch/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/denoising_diffusion_pytorch/ddpm_sde.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/denoising_diffusion_pytorch/etp_dpm_2order_sde.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/denoising_diffusion_pytorch/etp_dpm_const_sde4.py" beforeDir="false" afterPath="$PROJECT_DIR$/denoising_diffusion_pytorch/ddm_const_sde.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/denoising_diffusion_pytorch/etp_dpm_linear_sde.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/denoising_diffusion_pytorch/mask_cond_unet10.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/denoising_diffusion_pytorch/mask_cond_unet11.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/denoising_diffusion_pytorch/mask_cond_unet12.py" beforeDir="false" afterPath="$PROJECT_DIR$/denoising_diffusion_pytorch/mask_cond_unet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/denoising_diffusion_pytorch/mask_cond_unet13.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/denoising_diffusion_pytorch/mask_cond_unet14.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/denoising_diffusion_pytorch/mask_cond_unet6.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/denoising_diffusion_pytorch/mask_cond_unet7.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/denoising_diffusion_pytorch/mask_cond_unet8.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/denoising_diffusion_pytorch/mask_cond_unet9.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metrics/metric.py" beforeDir="false" afterPath="$PROJECT_DIR$/metrics/metric.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample_cond_ldm.py" beforeDir="false" afterPath="$PROJECT_DIR$/sample_cond_ldm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_cond_ldm.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_cond_ldm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +144,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701264754151</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="first commit">
+      <created>1701264876944</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701264876944</updated>
+    </task>
+    <task id="LOCAL-00006" summary="first commit">
+      <created>1701264909958</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701264909958</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

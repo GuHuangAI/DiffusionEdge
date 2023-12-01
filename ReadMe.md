@@ -28,14 +28,12 @@ The data structure should look like:
 |-- $data_root
 |   |-- image
 |   |-- |-- raw
-|   |-- |-- |-- real
-|   |-- |-- |-- |-- XXXXX.jpg
-|   |-- |-- |-- |-- XXXXX.jpg
+|   |-- |-- |-- XXXXX.jpg
+|   |-- |-- |-- XXXXX.jpg
 |   |-- edge
 |   |-- |-- raw
-|   |-- |-- |-- real
-|   |-- |-- |-- |-- XXXXX.png
-|   |-- |-- |-- |-- XXXXX.png
+|   |-- |-- |-- XXXXX.png
+|   |-- |-- |-- XXXXX.png
 ```
 
 ## III. Quickly Demo !
@@ -57,15 +55,15 @@ python demo.py --input_dir $your input dir$ --pre_weight $the downloaded weight 
 ~~~
 accelerate launch train_vae.py --cfg ./configs/first_stage_d4.yaml
 ~~~
-2. you should add the final model weight of the first stage to the config file `./configs/BSDS_swin_randresize.yaml` (**line 42**), then train latent diffusion-edge model:
+2. you should add the final model weight of the first stage to the config file `./configs/BSDS_train.yaml` (**line 42**), then train latent diffusion-edge model:
 ~~~
-accelerate launch train_cond_ldm.py --cfg ./configs/BSDS_swin_randresize.yaml
+accelerate launch train_cond_ldm.py --cfg ./configs/BSDS_train.yaml
 ~~~
 
 ## V. Inference.
 make sure your model weight path is added in the config file, and run:
 ~~~
-python sample_cond_ldm.py --cfg ./configs/BSDS_swin_randresize_sample.yaml
+python sample_cond_ldm.py --cfg ./configs/BSDS_sample.yaml
 ~~~
 
 ## Concat

@@ -1,6 +1,6 @@
 model:
-  model_type: const_sde4
-  model_name: cond_unet12
+  model_type: const_sde
+  model_name: cond_unet
   image_size: [320, 320]
   input_keys: ['image', 'cond']
   ckpt_path:
@@ -8,7 +8,7 @@ model:
   only_model: False
   timesteps: 1000
   train_sample: -1
-  sampling_timesteps: 20
+  sampling_timesteps: 5
   loss_type: l2
   objective: pred_KC
   start_dist: normal

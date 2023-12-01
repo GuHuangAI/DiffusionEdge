@@ -1,6 +1,6 @@
 model:
-  model_type: const_sde4
-  model_name: cond_unet12
+  model_type: const_sde
+  model_name: cond_unet
   image_size: [320, 320]
   input_keys: ['image', 'cond']
   ckpt_path:
@@ -64,7 +64,7 @@ model:
 data:
   name: edge
   crop_type: rand_crop
-  img_folder: '/data/yeyunfan/edge_detection_datasets/datasets/MDBD_boundary_split3/train'
+  img_folder: '/data/yeyunfan/edge_detection_datasets/datasets/NYUD_100%/train'
   augment_horizontal_flip: True
   batch_size: 8
   num_workers: 8
@@ -76,10 +76,10 @@ trainer:
   train_num_steps: 100000
   save_and_sample_every: 5000
   log_freq: 1000
-  results_folder: "/data/huang/diffusion_edge/checkpoints/Multicue_bound_split3_swin_unet12_disloss"
+  results_folder: "/data/huang/diffusion_edge/checkpoints/NYUD_swin_unet12_no_resize_disloss"
   amp: False
   fp16: False
-  resume_milestone: 2
+  resume_milestone: 1
   test_before: True
   ema_update_after_step: 10000
   ema_update_every: 10
