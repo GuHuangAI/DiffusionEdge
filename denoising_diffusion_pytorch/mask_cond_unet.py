@@ -682,16 +682,28 @@ class Unet(nn.Module):
 
         if cfg.cond_net == 'effnet':
             f_condnet = 48
-            self.init_conv_mask = efficientnet_b7(weights=EfficientNet_B7_Weights)
+            if cfg.get('without_pretrain', False):
+                self.init_conv_mask = efficientnet_b7()
+            else:
+                self.init_conv_mask = efficientnet_b7(weights=EfficientNet_B7_Weights)
         elif cfg.cond_net == 'resnet':
             f_condnet = 256
-            self.init_conv_mask = resnet101(weights=ResNet101_Weights)
+            if cfg.get('without_pretrain', False):
+                self.init_conv_mask = resnet101()
+            else:
+                self.init_conv_mask = resnet101(weights=ResNet101_Weights)
         elif cfg.cond_net == 'swin':
             f_condnet = 128
-            self.init_conv_mask = swin_b(weights=Swin_B_Weights)
+            if cfg.get('without_pretrain', False):
+                self.init_conv_mask = swin_b()
+            else:
+                self.init_conv_mask = swin_b(weights=Swin_B_Weights)
         elif cfg.cond_net == 'vgg':
             f_condnet = 128
-            self.init_conv_mask = vgg16(weights=VGG16_Weights)
+            if cfg.get('without_pretrain', False):
+                self.init_conv_mask = vgg16()
+            else:
+                self.init_conv_mask = vgg16(weights=VGG16_Weights)
         else:
             raise NotImplementedError
         self.init_conv = nn.Sequential(

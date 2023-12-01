@@ -26,12 +26,13 @@ def load_conf(config_file, conf={}):
             conf[k] = v
     return conf
 def parse_args():
-    parser = argparse.ArgumentParser(description="training vae configure")
-    parser.add_argument("--cfg", help="experiment configure file name", type=str, required=True, default="./configs/default.yaml")
+    parser = argparse.ArgumentParser(description="demo configure")
+    parser.add_argument("--cfg", help="experiment configure file name", type=str, default="./configs/default.yaml")
     parser.add_argument("--input_dir", help='input directory', type=str, required=True)
     parser.add_argument("--pre_weight", help='path of pretrained weight', type=str, required=True)
     parser.add_argument("--sampling_timesteps", help='sampling timesteps', type=int, default=1)
     parser.add_argument("--out_dir", help='output directory', type=str, required=True)
+    parser.add_argument("--batch_size", help='batch_size', type=int, default=16)
     args = parser.parse_args()
     args.cfg = load_conf(args.cfg)
     return args
@@ -113,6 +114,7 @@ def main(args):
 
     sampler_cfg = cfg.sampler
     sampler_cfg.save_folder = args.out_dir
+    sampler_cfg.ckpt_path = args.pre_weight
     sampler = Sampler(
         ldm, dl, batch_size=sampler_cfg.batch_size,
         sample_num=sampler_cfg.sample_num,

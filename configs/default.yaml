@@ -37,10 +37,11 @@ model:
       num_res_blocks: 2
       attn_resolutions: [ ]
       dropout: 0.0
-    ckpt_path: 'checkpoints/first_stage_total_320.pt'
+    ckpt_path:
   unet:
     dim: 128
     cond_net: swin
+    without_pretrain: False
     channels: 3
     out_mul: 1
     dim_mults: [ 1, 2, 4, 4, ] # num_down = len(dim_mults)
@@ -69,5 +70,5 @@ sampler:
   batch_size: 1
   sample_num: 300
   use_ema: True
-  save_folder: "/data/huang/diffusion_edge/checkpoints/BSDS_swin_unet12_disloss_bs2x8/results_model4_test_step"
-  ckpt_path: "/data/huang/diffusion_edge/checkpoints/BSDS_swin_unet12_disloss_bs2x8/model-4.pt"
+  save_folder:
+  ckpt_path:
