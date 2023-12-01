@@ -6,6 +6,7 @@
 ![](assets/denoising_process/5096/test.gif)
 
 # News
+- We now update a simple demo, please see [Quickly Demo](#iii-quickly-demo-)
 - First Committed. 
 
 ## I. Before Starting.
