@@ -54,7 +54,7 @@ python demo.py --input_dir $your input dir$ --pre_weight $the downloaded weight 
 ~~~
 
 ## IV. Training.
-1. training the first stage model (AutoEncoder):
+1. train the first stage model (AutoEncoder):
 ~~~
 accelerate launch train_vae.py --cfg ./configs/first_stage_d4.yaml
 ~~~
