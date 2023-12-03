@@ -26,7 +26,7 @@ accelerate config
 ~~~
 
 ## II. Prepare Data.
-The data structure should look like:
+The training data structure should look like:
 ```commandline
 |-- $data_root
 |   |-- image
@@ -37,6 +37,12 @@ The data structure should look like:
 |   |-- |-- raw
 |   |-- |-- |-- XXXXX.png
 |   |-- |-- |-- XXXXX.png
+```
+The testing data structure should look like:
+```commandline
+|-- $data_root
+|   |-- XXXXX.jpg
+|   |-- XXXXX.jpg
 ```
 
 ## III. Quickly Demo !
