@@ -64,7 +64,7 @@ accelerate launch train_cond_ldm.py --cfg ./configs/BSDS_train.yaml
 ~~~
 
 ## V. Inference.
-make sure your model weight path is added in the config file, and run:
+make sure your model weight path is added in the config file `./configs/BSDE_sample.yaml` (**line 73**), and run:
 ~~~
 python sample_cond_ldm.py --cfg ./configs/BSDS_sample.yaml
 ~~~
