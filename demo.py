@@ -32,7 +32,6 @@ def parse_args():
     parser.add_argument("--pre_weight", help='path of pretrained weight', type=str, required=True)
     parser.add_argument("--sampling_timesteps", help='sampling timesteps', type=int, default=1)
     parser.add_argument("--out_dir", help='output directory', type=str, required=True)
-    parser.add_argument("--batch_size", help='batch_size', type=int, default=16)
     args = parser.parse_args()
     args.cfg = load_conf(args.cfg)
     return args
@@ -111,7 +110,7 @@ def main(args):
         raise NotImplementedError
     dl = DataLoader(dataset, batch_size=cfg.sampler.batch_size, shuffle=False, pin_memory=True,
                     num_workers=data_cfg.get('num_workers', 2))
-
+    # for slide sampling, we only support batch size = 1
     sampler_cfg = cfg.sampler
     sampler_cfg.save_folder = args.out_dir
     sampler_cfg.ckpt_path = args.pre_weight
