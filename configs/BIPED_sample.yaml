@@ -69,5 +69,5 @@ sampler:
   batch_size: 1
   sample_num: 300
   use_ema: True
-  save_folder: "/data/huang/diffusion_edge/checkpoints/BIPED_size320_swin_unet12_no_resize_disloss//results_model9_stride240_test_step"
-  ckpt_path: "/data/huang/diffusion_edge/checkpoints/BIPED_size320_swin_unet12_no_resize_disloss//model-9.pt"
+  save_folder: "./results"
+  ckpt_path: "/data/huang/diffusion_edge/checkpoints/BIPED_size320_swin_unet12_no_resize_disloss/model-9.pt"

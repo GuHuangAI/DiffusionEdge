@@ -69,5 +69,5 @@ sampler:
   batch_size: 1
   sample_num: 300
   use_ema: True
-  save_folder: "/data/huang/diffusion_edge/checkpoints/NYUD_swin_unet12_no_resize_disloss//results_model17_stride240_test_step"
+  save_folder: "./results"
   ckpt_path: "/data/huang/diffusion_edge/checkpoints/NYUD_swin_unet12_no_resize_disloss//model-17.pt"
