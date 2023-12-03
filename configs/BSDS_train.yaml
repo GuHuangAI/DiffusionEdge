@@ -74,7 +74,7 @@ trainer:
   train_num_steps: 100000
   save_and_sample_every: 5000
   log_freq: 1000
-  results_folder: "/data/huang/diffusion_edge/checkpoints/BSDS_swin_unet12_disloss_bs2x8"
+  results_folder: "./training/BSDS_swin_unet12_disloss_bs2x8"
   amp: False
   fp16: False
   resume_milestone: 0
