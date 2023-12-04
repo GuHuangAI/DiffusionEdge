@@ -6,6 +6,10 @@
 ![](assets/denoising_process/5096/test.gif)
 
 # News
+- Upload pretrained weights and visualizations of
+  [BSDS](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1/results_bsds_stride240_step5.zip),
+  [BIPED](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1/results_biped_stride240_step5.zip) and
+  [NYUD](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1/results_nyud_stride240_step5.zip).
 - We now update a simple demo, please see [Quickly Demo](#iii-quickly-demo-)
 - First Committed. 
 
