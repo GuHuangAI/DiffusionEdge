@@ -7,6 +7,10 @@
     <list default="true" id="a57fb937-9c67-4f91-826e-8853fd385b4b" name="Changes" comment="update ReadMe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BIPED_train.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/BIPED_train.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_train.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/BSDS_train.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/NYUD_train.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/NYUD_train.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_cond_ldm.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_cond_ldm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701624476117</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="update ReadMe">
+      <created>1701680742231</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1701680742231</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update ReadMe">
+      <created>1701681987098</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1701681987098</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

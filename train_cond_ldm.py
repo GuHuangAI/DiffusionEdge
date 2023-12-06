@@ -163,7 +163,7 @@ class Trainer(object):
             mixed_precision='fp16' if fp16 else 'no',
             kwargs_handlers=[ddp_handler],
         )
-
+        self.enable_resume = cfg.trainer.get('enable_resume', False)
         self.accelerator.native_amp = amp
 
         self.model = model
@@ -219,20 +219,25 @@ class Trainer(object):
     def save(self, milestone):
         if not self.accelerator.is_local_main_process:
             return
-
-        data = {
-            'step': self.step,
-            'model': self.accelerator.get_state_dict(self.model),
-            'opt': self.opt.state_dict(),
-            'lr_scheduler': self.lr_scheduler.state_dict(),
-            'ema': self.ema.state_dict(),
-            'scaler': self.accelerator.scaler.state_dict() if exists(self.accelerator.scaler) else None
-        }
-        data_only_model = {'ema': self.ema.state_dict(),}
-        torch.save(data, str(self.results_folder / f'model-{milestone}.pt'))
-        torch.save(data_only_model, str(self.results_folder / f'model-only-{milestone}.pt'))
+        if self.enable_resume:
+            data = {
+                'step': self.step,
+                'model': self.accelerator.get_state_dict(self.model),
+                'opt': self.opt.state_dict(),
+                'lr_scheduler': self.lr_scheduler.state_dict(),
+                'ema': self.ema.state_dict(),
+                'scaler': self.accelerator.scaler.state_dict() if exists(self.accelerator.scaler) else None
+            }
+            # data_only_model = {'ema': self.ema.state_dict(),}
+            torch.save(data, str(self.results_folder / f'model-{milestone}.pt'))
+        else:
+            data = {
+                'model': self.accelerator.get_state_dict(self.model),
+            }
+            torch.save(data, str(self.results_folder / f'model-{milestone}.pt'))
 
     def load(self, milestone):
+        assert self.enable_resume; 'resume is available only if self.enable_resume is True !'
         accelerator = self.accelerator
         device = accelerator.device
 

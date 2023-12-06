@@ -75,6 +75,7 @@ trainer:
   min_lr: !!float 5e-6
   train_num_steps: 100000
   save_and_sample_every: 5000
+  enable_resume: False
   log_freq: 1000
   results_folder: "./training/BIPED_size320_swin_unet12_no_resize_disloss"
   amp: False

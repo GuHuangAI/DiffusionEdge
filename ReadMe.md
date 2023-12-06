@@ -52,11 +52,11 @@ The testing data structure should look like:
 ## III. Quickly Demo !
 1. download the pretrained weights:  
 
-| Dataset | ODS (<font color=blue>SEval</font>/<font color=green>CEval</font>) | OIS (<font color=blue>SEval</font>/<font color=green>CEval</font>) | AC    | Weight                                                                               |
-|---------|--------------------------------------------------------------------|--------------------------------------------------------------------|-------|--------------------------------------------------------------------------------------|
-| BSDS    | <font color=blue>0.834</font> / <font color=green>0.749</font>     | <font color=blue>0.848</font> / <font color=green>0.754</font>     | 0.476 | [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1/bsds.pt)  |
-| NYUD    | <font color=blue>0.761</font> / <font color=green>0.732</font>     | <font color=blue>0.766</font> / <font color=green>0.738</font>     | 0.846 | [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1/biped.pt) |\
-| BIPED   | <font color=blue>0.899</font>                                      | <font color=blue>0.901</font>                                      | 0.849 | [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1/nyud.pt)  |
+| Dataset | ODS (<font color=blue>SEval</font>/<font color=green>CEval</font>) | OIS (<font color=blue>SEval</font>/<font color=green>CEval</font>) | AC    | Weight                                                                                 |
+|---------|--------------------------------------------------------------------|--------------------------------------------------------------------|-------|----------------------------------------------------------------------------------------|
+| BSDS    | <font color=blue>0.834</font> / <font color=green>0.749</font>     | <font color=blue>0.848</font> / <font color=green>0.754</font>     | 0.476 | [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/bsds.pt)  |
+| NYUD    | <font color=blue>0.761</font> / <font color=green>0.732</font>     | <font color=blue>0.766</font> / <font color=green>0.738</font>     | 0.846 | [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/biped.pt) |\
+| BIPED   | <font color=blue>0.899</font>                                      | <font color=blue>0.901</font>                                      | 0.849 | [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/nyud.pt)  |
 
 2. put your images in a directory and run:
 ~~~

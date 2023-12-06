@@ -75,11 +75,12 @@ trainer:
   min_lr: !!float 5e-6
   train_num_steps: 100000
   save_and_sample_every: 5000
+  enable_resume: False
   log_freq: 1000
   results_folder: "./training/NYUD_swin_unet12_no_resize_disloss"
   amp: False
   fp16: False
-  resume_milestone: 1
+  resume_milestone: 0
   test_before: True
   ema_update_after_step: 10000
   ema_update_every: 10
