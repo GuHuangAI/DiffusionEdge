@@ -6,11 +6,12 @@
 ![](assets/denoising_process/5096/test.gif)
 
 # News
+- Upload the pretrained first stage checkpoint [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/first_stage_total_320.pt).
 - Upload pretrained weights and visualizations of
   [BSDS](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1/results_bsds_stride240_step5.zip),
   [BIPED](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1/results_biped_stride240_step5.zip) and
   [NYUD](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1/results_nyud_stride240_step5.zip).
-- We now update a simple demo, please see [Quickly Demo](#iii-quickly-demo-)
+- We now update a simple demo, please see **[Quickly Demo](#iii-quickly-demo-)**
 - First Committed. 
 
 ## I. Before Starting.
