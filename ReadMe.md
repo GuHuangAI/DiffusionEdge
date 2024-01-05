@@ -1,4 +1,4 @@
-## DiffusionEdge: Diffusion Probabilistic Model for Crisp Edge Detection  ([arxiv]())
+## DiffusionEdge: Diffusion Probabilistic Model for Crisp Edge Detection  ([arxiv](https://arxiv.org/abs/2401.02032))
 [Yunfan Ye](https://yunfan1202.github.io), [Yuhang Huang](https://github.com/GuHuangAI), [Renjiao Yi](https://renjiaoyi.github.io/), [Zhiping Cai](), [Kai Xu](http://kevinkaixu.net/index.html).
 
 ![Teaser](assets/teaser.png)
