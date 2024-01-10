@@ -6,6 +6,7 @@
 ![](assets/denoising_process/5096/test.gif)
 
 # News
+- Update demo.py for faster inference.
 - 2023-12-09: The paper is accepted by **AAAI-2024**.
 - Upload the pretrained **first stage checkpoint** [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/first_stage_total_320.pt).
 - Upload pretrained weights and visualizations of
@@ -62,12 +63,13 @@ The testing data structure should look like:
 
 2. put your images in a directory and run:
 ~~~
-python demo.py --input_dir $your input dir$ --pre_weight $the downloaded weight path$ --out_dir $the path saves your results$
+python demo.py --input_dir $your input dir$ --pre_weight $the downloaded weight path$ --out_dir $the path saves your results$ --bs 8
 ~~~
+The larger `--bs` is, the faster the inference speed is and the larger the CUDA memory is.
 
 ## IV. Training.
 1. train the first stage model (AutoEncoder):
-~~~
+~~~[inference_numpy_for_slide.py](..%2F..%2F..%2F..%2Fmedia%2Fhuang%2F2da18d46-7cba-4259-9abd-0df819bb104c%2Finference_numpy_for_slide.py)
 accelerate launch train_vae.py --cfg ./configs/first_stage_d4.yaml
 ~~~
 2. you should add the final model weight of the first stage to the config file `./configs/BSDS_train.yaml` (**line 42**), then train latent diffusion-edge model:

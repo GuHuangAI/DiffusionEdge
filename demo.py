@@ -32,6 +32,7 @@ def parse_args():
     parser.add_argument("--pre_weight", help='path of pretrained weight', type=str, required=True)
     parser.add_argument("--sampling_timesteps", help='sampling timesteps', type=int, default=1)
     parser.add_argument("--out_dir", help='output directory', type=str, required=True)
+    parser.add_argument("--bs", help='batch_size for inference', type=int, default=8)
     args = parser.parse_args()
     args.cfg = load_conf(args.cfg)
     return args
@@ -114,6 +115,7 @@ def main(args):
     sampler_cfg = cfg.sampler
     sampler_cfg.save_folder = args.out_dir
     sampler_cfg.ckpt_path = args.pre_weight
+    sampler_cfg.batch_size = args.bs
     sampler = Sampler(
         ldm, dl, batch_size=sampler_cfg.batch_size,
         sample_num=sampler_cfg.sample_num,
@@ -202,7 +204,8 @@ class Sampler(object):
                 if self.cfg.sampler.sample_type == 'whole':
                     batch_pred = self.whole_sample(cond, raw_size=(raw_h, raw_w), mask=mask)
                 elif self.cfg.sampler.sample_type == 'slide':
-                    batch_pred = self.slide_sample(cond, crop_size=self.cfg.sampler.get('crop_size', [320, 320]), stride=self.cfg.sampler.stride, mask=mask)
+                    batch_pred = self.slide_sample(cond, crop_size=self.cfg.sampler.get('crop_size', [320, 320]),
+                                                   stride=self.cfg.sampler.stride, mask=mask, bs=self.batch_size)
                 else:
                     raise NotImplementedError
                 for j, (img, c) in enumerate(zip(batch_pred, cond)):
@@ -211,7 +214,7 @@ class Sampler(object):
         accelerator.print('sampling complete')
 
     # ----------------------------------waiting revision------------------------------------
-    def slide_sample(self, inputs, crop_size, stride, mask=None):
+    def slide_sample(self, inputs, crop_size, stride, mask=None, bs=8):
         """Inference by sliding-window with overlap.
 
         If h_crop > h_img or w_crop > w_img, the small patch will be used to
@@ -238,9 +241,14 @@ class Sampler(object):
         h_grids = max(h_img - h_crop + h_stride - 1, 0) // h_stride + 1
         w_grids = max(w_img - w_crop + w_stride - 1, 0) // w_stride + 1
         preds = inputs.new_zeros((batch_size, out_channels, h_img, w_img))
-        aux_out1 = inputs.new_zeros((batch_size, out_channels, h_img, w_img))
+        # aux_out1 = inputs.new_zeros((batch_size, out_channels, h_img, w_img))
         # aux_out2 = inputs.new_zeros((batch_size, out_channels, h_img, w_img))
         count_mat = inputs.new_zeros((batch_size, 1, h_img, w_img))
+        crop_imgs = []
+        x1s = []
+        x2s = []
+        y1s = []
+        y2s = []
         for h_idx in range(h_grids):
             for w_idx in range(w_grids):
                 y1 = h_idx * h_stride
@@ -250,28 +258,72 @@ class Sampler(object):
                 y1 = max(y2 - h_crop, 0)
                 x1 = max(x2 - w_crop, 0)
                 crop_img = inputs[:, :, y1:y2, x1:x2]
-                # change the image shape to patch shape
-                # batch_img_metas[0]['img_shape'] = crop_img.shape[2:]
-                # the output of encode_decode is seg logits tensor map
-                # with shape [N, C, H, W]
-                # crop_seg_logit = self.encode_decode(crop_img, batch_img_metas)
-                if isinstance(self.model, nn.parallel.DistributedDataParallel):
-                    crop_seg_logit = self.model.module.sample(batch_size=1, cond=crop_img, mask=mask)
-                    e1 = e2 = None
-                    aux_out = None
-                elif isinstance(self.model, nn.Module):
-                    crop_seg_logit = self.model.sample(batch_size=1, cond=crop_img, mask=mask)
-                    e1 = e2 = None
-                    aux_out = None
-                else:
-                    raise NotImplementedError
-                preds += F.pad(crop_seg_logit,
-                               (int(x1), int(preds.shape[3] - x2), int(y1),
-                                int(preds.shape[2] - y2)))
+                crop_imgs.append(crop_img)
+                x1s.append(x1)
+                x2s.append(x2)
+                y1s.append(y1)
+                y2s.append(y2)
+        crop_imgs = torch.cat(crop_imgs, dim=0)
+        crop_seg_logits_list = []
+        num_windows = crop_imgs.shape[0]
+        bs = bs
+        length = math.ceil(num_windows / bs)
+        for i in range(length):
+            if i == length - 1:
+                crop_imgs_temp = crop_imgs[bs * i:num_windows, ...]
+            else:
+                crop_imgs_temp = crop_imgs[bs * i:bs * (i + 1), ...]
 
-                count_mat[:, :, y1:y2, x1:x2] += 1
+            if isinstance(self.model, nn.parallel.DistributedDataParallel):
+                crop_seg_logits = self.model.module.sample(batch_size=crop_imgs_temp.shape[0], cond=crop_imgs_temp,
+                                                           mask=mask)
+            elif isinstance(self.model, nn.Module):
+                crop_seg_logits = self.model.sample(batch_size=crop_imgs_temp.shape[0], cond=crop_imgs_temp, mask=mask)
+            else:
+                raise NotImplementedError
+
+            crop_seg_logits_list.append(crop_seg_logits)
+        crop_seg_logits = torch.cat(crop_seg_logits_list, dim=0)
+        for crop_seg_logit, x1, x2, y1, y2 in zip(crop_seg_logits, x1s, x2s, y1s, y2s):
+            preds += F.pad(crop_seg_logit,
+                           (int(x1), int(preds.shape[3] - x2), int(y1),
+                            int(preds.shape[2] - y2)))
+            count_mat[:, :, y1:y2, x1:x2] += 1
+
         assert (count_mat == 0).sum() == 0
         seg_logits = preds / count_mat
+
+        # for h_idx in range(h_grids):
+        #     for w_idx in range(w_grids):
+        #         y1 = h_idx * h_stride
+        #         x1 = w_idx * w_stride
+        #         y2 = min(y1 + h_crop, h_img)
+        #         x2 = min(x1 + w_crop, w_img)
+        #         y1 = max(y2 - h_crop, 0)
+        #         x1 = max(x2 - w_crop, 0)
+        #         crop_img = inputs[:, :, y1:y2, x1:x2]
+        #         # change the image shape to patch shape
+        #         # batch_img_metas[0]['img_shape'] = crop_img.shape[2:]
+        #         # the output of encode_decode is seg logits tensor map
+        #         # with shape [N, C, H, W]
+        #         # crop_seg_logit = self.encode_decode(crop_img, batch_img_metas)
+        #         if isinstance(self.model, nn.parallel.DistributedDataParallel):
+        #             crop_seg_logit = self.model.module.sample(batch_size=1, cond=crop_img, mask=mask)
+        #             e1 = e2 = None
+        #             aux_out = None
+        #         elif isinstance(self.model, nn.Module):
+        #             crop_seg_logit = self.model.sample(batch_size=1, cond=crop_img, mask=mask)
+        #             e1 = e2 = None
+        #             aux_out = None
+        #         else:
+        #             raise NotImplementedError
+        #         preds += F.pad(crop_seg_logit,
+        #                        (int(x1), int(preds.shape[3] - x2), int(y1),
+        #                         int(preds.shape[2] - y2)))
+        #
+        #         count_mat[:, :, y1:y2, x1:x2] += 1
+        # assert (count_mat == 0).sum() == 0
+        # seg_logits = preds / count_mat
         return seg_logits
 
     def whole_sample(self, inputs, raw_size, mask=None):
