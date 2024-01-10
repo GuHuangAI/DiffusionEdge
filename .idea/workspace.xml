@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a57fb937-9c67-4f91-826e-8853fd385b4b" name="Changes" comment="update ReadMe">
+    <list default="true" id="a57fb937-9c67-4f91-826e-8853fd385b4b" name="Changes" comment="update demo.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,15 +28,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/huang/code/DiffusionEdge",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/huang/code/DiffusionEdge&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.demo">
     <configuration name="demo" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Mask-Conditioned-Latent-Space-Diffusion" />
@@ -327,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704866094434</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="update demo.py">
+      <created>1704875149259</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1704875149259</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -335,7 +341,8 @@
     <MESSAGE value="update first_stage_d4.yaml" />
     <MESSAGE value="update config" />
     <MESSAGE value="update ReadMe" />
-    <option name="LAST_COMMIT_MESSAGE" value="update ReadMe" />
+    <MESSAGE value="update demo.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="update demo.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -9,10 +9,7 @@
 - Update demo.py for faster inference.
 - 2023-12-09: The paper is accepted by **AAAI-2024**.
 - Upload the pretrained **first stage checkpoint** [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/first_stage_total_320.pt).
-- Upload pretrained weights and visualizations of
-  [BSDS](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1/results_bsds_stride240_step5.zip),
-  [BIPED](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1/results_biped_stride240_step5.zip) and
-  [NYUD](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1/results_nyud_stride240_step5.zip).
+- Upload **pretrained weights** and **pre-computed results**.
 - We now update a simple demo, please see **[Quickly Demo](#iii-quickly-demo-)**
 - First Committed. 
 
@@ -55,11 +52,11 @@ The testing data structure should look like:
 ## III. Quickly Demo !
 1. download the pretrained weights:  
 
-| Dataset | ODS (<font color=blue>SEval</font>/<font color=green>CEval</font>) | OIS (<font color=blue>SEval</font>/<font color=green>CEval</font>) | AC    | Weight                                                                                 |
-|---------|--------------------------------------------------------------------|--------------------------------------------------------------------|-------|----------------------------------------------------------------------------------------|
-| BSDS    | <font color=blue>0.834</font> / <font color=green>0.749</font>     | <font color=blue>0.848</font> / <font color=green>0.754</font>     | 0.476 | [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/bsds.pt)  |
-| NYUD    | <font color=blue>0.761</font> / <font color=green>0.732</font>     | <font color=blue>0.766</font> / <font color=green>0.738</font>     | 0.846 | [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/nyud.pt)  |\
-| BIPED   | <font color=blue>0.899</font>                                      | <font color=blue>0.901</font>                                      | 0.849 | [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/biped.pt) |
+| Dataset | ODS (<font color=blue>SEval</font>/<font color=green>CEval</font>) | OIS (<font color=blue>SEval</font>/<font color=green>CEval</font>) | AC    | Weight                                                                                 | Pre-computed results                                                                                          |
+|---------|--------------------------------------------------------------------|--------------------------------------------------------------------|-------|----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| BSDS    | <font color=blue>0.834</font> / <font color=green>0.749</font>     | <font color=blue>0.848</font> / <font color=green>0.754</font>     | 0.476 | [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/bsds.pt)  | [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1/results_bsds_stride240_step5.zip)  |
+| NYUD    | <font color=blue>0.761</font> / <font color=green>0.732</font>     | <font color=blue>0.766</font> / <font color=green>0.738</font>     | 0.846 | [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/nyud.pt)  | [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1/results_nuyd_stride240_step5.zip)  |
+| BIPED   | <font color=blue>0.899</font>                                      | <font color=blue>0.901</font>                                      | 0.849 | [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/biped.pt) | [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1/results_biped_stride240_step5.zip) |
 
 2. put your images in a directory and run:
 ~~~
