@@ -81,7 +81,7 @@ python sample_cond_ldm.py --cfg ./configs/BSDS_sample.yaml
 ~~~
 Note that you can modify the `sampling_timesteps` (**line 11**) to control the inference speed.
 
-## Concat
+## Contact
 If you have some questions, please contact with huangai@nudt.edu.cn.
 ## Thanks
 Thanks to the base code [DDM-Public](https://github.com/GuHuangAI/DDM-Public).
