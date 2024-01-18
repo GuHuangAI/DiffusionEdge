@@ -121,12 +121,12 @@ def main(args):
                     break
                 if isinstance(trainer.model, nn.parallel.DistributedDataParallel):
                     all_images, *_ = trainer.model.module.sample(batch_size=datatmp['cond'].shape[0],
-                                                  cond=datatmp['cond'].to(trainer.model.device),
-                                                  mask=datatmp['ori_mask'].to(trainer.model.device) if 'ori_mask' in datatmp else None)
+                                                  cond=datatmp['cond'].to(trainer.accelerator.device),
+                                                  mask=datatmp['ori_mask'].to(trainer.accelerator.device) if 'ori_mask' in datatmp else None)
                 elif isinstance(trainer.model, nn.Module):
                     all_images, *_ = trainer.model.sample(batch_size=datatmp['cond'].shape[0],
-                                                  cond=datatmp['cond'].to(trainer.model.device),
-                                                  mask=datatmp['ori_mask'].to(trainer.model.device) if 'ori_mask' in datatmp else None)
+                                                  cond=datatmp['cond'].to(trainer.accelerator.device),
+                                                  mask=datatmp['ori_mask'].to(trainer.accelerator.device) if 'ori_mask' in datatmp else None)
 
             # all_images = torch.cat(all_images_list, dim = 0)
             nrow = 2 ** math.floor(math.log2(math.sqrt(data_cfg.batch_size)))
