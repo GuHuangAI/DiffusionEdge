@@ -68,6 +68,6 @@ sampler:
   stride: [240, 240]
   batch_size: 1
   sample_num: 300
-  use_ema: True
+  use_ema: False
   save_folder: "./results"
   ckpt_path: "/data/huang/diffusion_edge/checkpoints/NYUD_swin_unet12_no_resize_disloss//model-17.pt"

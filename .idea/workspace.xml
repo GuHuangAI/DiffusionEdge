@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a57fb937-9c67-4f91-826e-8853fd385b4b" name="Changes" comment="update ReadMe.md" />
+    <list default="true" id="a57fb937-9c67-4f91-826e-8853fd385b4b" name="Changes" comment="fix device bug">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BIPED_sample.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/BIPED_sample.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/BSDS_sample.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/BSDS_sample.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/NYUD_sample.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/NYUD_sample.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -344,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705485954979</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="fix device bug">
+      <created>1705588702494</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1705588702494</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -354,7 +366,8 @@
     <MESSAGE value="update ReadMe" />
     <MESSAGE value="update demo.py" />
     <MESSAGE value="update ReadMe.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="update ReadMe.md" />
+    <MESSAGE value="fix device bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix device bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -383,6 +396,11 @@
           <url>file://$PROJECT_DIR$/demo.py</url>
           <line>56</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/demo.py</url>
+          <line>168</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
