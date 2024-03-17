@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a57fb937-9c67-4f91-826e-8853fd385b4b" name="Changes" comment="fix device bug">
+    <list default="true" id="a57fb937-9c67-4f91-826e-8853fd385b4b" name="Changes" comment="fix sample_cond_ldm.py bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/BIPED_sample.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/BIPED_sample.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/BSDS_sample.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/BSDS_sample.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/NYUD_sample.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/NYUD_sample.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705588702494</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="fix sample_cond_ldm.py bug">
+      <created>1705654822496</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1705654822496</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -367,7 +371,8 @@
     <MESSAGE value="update demo.py" />
     <MESSAGE value="update ReadMe.md" />
     <MESSAGE value="fix device bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix device bug" />
+    <MESSAGE value="fix sample_cond_ldm.py bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix sample_cond_ldm.py bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
