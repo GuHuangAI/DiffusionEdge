@@ -83,7 +83,7 @@ python sample_cond_ldm.py --cfg ./configs/BSDS_sample.yaml
 Note that you can modify the `sampling_timesteps` (**line 11**) to control the inference speed.
 
 ## VI. Real-time DiffusionEdge.
-1. We now only test in the following environment.
+1. We now only test in the following environment, and more details will be released soon.
 
 | Environment | Version | 
 |-------------|---------|
