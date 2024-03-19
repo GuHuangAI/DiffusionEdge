@@ -6,6 +6,7 @@
 ![](assets/denoising_process/5096/test.gif)
 
 # News
+- We release a real-time model trained on BSDS, please see **[Real-time DiffusionEdge](#vi-real-time-diffusionedge)**.
 - Update demo.py for faster inference.
 - 2023-12-09: The paper is accepted by **AAAI-2024**.
 - Upload the pretrained **first stage checkpoint** [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/first_stage_total_320.pt).
@@ -80,6 +81,22 @@ make sure your model weight path is added in the config file `./configs/BSDS_sam
 python sample_cond_ldm.py --cfg ./configs/BSDS_sample.yaml
 ~~~
 Note that you can modify the `sampling_timesteps` (**line 11**) to control the inference speed.
+
+## VI. Real-time DiffusionEdge.
+1. We now only test in the following environment.
+
+| Environment | Version | 
+|-------------|---------|
+| TensorRT    | 8.6.1   |  
+| cuda        | 11.6    | 
+| cudnn       | 8.7.0   | 
+| pycuda      | 2024.1  |
+
+2. Download the pretrained [weight](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/model_crop_size_256_fps_150_ods_0813_ois_0825.trt). 
+   Real-time, qi~dong!
+~~~
+python demo_trt.py --input_dir $your input dir$ --pre_weight $the downloaded weight path$ --out_dir $the path saves your results$
+~~~
 
 ## Contact
 If you have some questions, please contact with huangai@nudt.edu.cn.
