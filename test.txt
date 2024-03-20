@@ -1,0 +1,35 @@
+## torch to onnx to trt
+
+1、修改yaml配置文件
+
+注意sample的yaml文件修改为ddm_const4_onnx，可以参考default.yaml文件修改相关配置，更新的文件在DDM-main.zip中自取
+
+
+2、训练好torch模型后，运行torch_to_onnx_dym.py得到onnx模型
+
+可修改相关配置（onnx的名称）
+
+python torch_to_onnx_dym.py --cfg configs/edge_detection/hole~~~
+
+![image-20240301220858513](/Users/wzf/Library/Application Support/typora-user-images/image-20240301220858513.png)
+
+3、尝试用刚得到的onnx模型做推理，运行sample_cond_ldm_onnx_dym.py
+
+此处data_batch为onnx模型推理时，每次推理的batch值（假设最后数据一共有800个batch，此处data_batch可设为100，即共进行8次onnx推理），设置一个合理的data_batch值
+
+python sample_cond_ldm_onnx_dym.py --cfg configs/edge_detection/hole~~~
+
+![image-20240301221022614](/Users/wzf/Library/Application Support/typora-user-images/image-20240301221022614.png)
+
+4、将onnx模型转换为trt模型，运行onnx_to_trt_dym.py
+
+python onnx_to_trt_dym.py
+
+![image-20240301221525809](/Users/wzf/Library/Application Support/typora-user-images/image-20240301221525809.png)
+
+5、尝试用刚得到的onnx模型做推理，运行sample_cond_ldm_trt_dym.py
+
+python sample_cond_ldm_trt_dym.py --cfg configs/edge_detection/hole~~~
+
+![image-20240301221610114](/Users/wzf/Library/Application Support/typora-user-images/image-20240301221610114.png)
+
