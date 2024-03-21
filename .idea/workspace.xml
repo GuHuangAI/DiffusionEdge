@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a57fb937-9c67-4f91-826e-8853fd385b4b" name="Changes" comment="update ReadMe">
+    <list default="true" id="a57fb937-9c67-4f91-826e-8853fd385b4b" name="Changes" comment="update ReadMe.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -393,7 +393,21 @@
       <option name="project" value="LOCAL" />
       <updated>1710938236653</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="fix demo_trt.py bug">
+      <created>1711038159111</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1711038159111</updated>
+    </task>
+    <task id="LOCAL-00044" summary="update ReadMe.md">
+      <created>1711038296274</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1711038296274</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -412,12 +426,13 @@
     <MESSAGE value="update first_stage_d4.yaml" />
     <MESSAGE value="update config" />
     <MESSAGE value="update demo.py" />
-    <MESSAGE value="update ReadMe.md" />
     <MESSAGE value="fix device bug" />
     <MESSAGE value="fix sample_cond_ldm.py bug" />
     <MESSAGE value="update a real-time model" />
     <MESSAGE value="update ReadMe" />
-    <option name="LAST_COMMIT_MESSAGE" value="update ReadMe" />
+    <MESSAGE value="fix demo_trt.py bug" />
+    <MESSAGE value="update ReadMe.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update ReadMe.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
