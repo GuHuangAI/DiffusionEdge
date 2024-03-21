@@ -160,7 +160,7 @@ class Sampler(object):
                 # print(cond)
                 # print("cond shape:", cond.shape)
                 mask = batch['ori_mask'] if 'ori_mask' in batch else None
-                ori_size = batch['ori_size']
+                raw_size = batch['raw_size']
                 bs = cond.shape[0]
 
                 # size problem
