@@ -93,6 +93,8 @@ Note that you can modify the `sampling_timesteps` (**line 11**) to control the i
 | cudnn       | 8.7.0   | 
 | pycuda      | 2024.1  |
 
+Plase follow this [link](https://github.com/NVIDIA/TensorRT) to install TensorRT.
+
 2. Download the pretrained [weight](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/model_crop_size_256_fps_150_ods_0813_ois_0825.trt). 
    Real-time, qi~dong!
 ~~~
