@@ -99,13 +99,6 @@
       <option name="presentableId" value="Default" />
       <updated>1701242110968</updated>
     </task>
-    <task id="LOCAL-00002" summary="first commit">
-      <created>1701254959399</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1701254959399</updated>
-    </task>
     <task id="LOCAL-00003" summary="first commit">
       <created>1701262736485</created>
       <option name="number" value="00003" />
@@ -442,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715094934172</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="update ReadMe.md">
+      <created>1716191666653</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1716191666653</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
