@@ -7,7 +7,7 @@
 
 # News
 - We release a real-time model trained on BSDS, please see **[Real-time DiffusionEdge](#vi-real-time-diffusionedge)**.
-- We create a [WeChat Group](https://private-user-images.githubusercontent.com/55237825/360436570-5c674a4d-5457-43b6-9ce5-cb755c97bc0a.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjQzMzE0NzUsIm5iZiI6MTcyNDMzMTE3NSwicGF0aCI6Ii81NTIzNzgyNS8zNjA0MzY1NzAtNWM2NzRhNGQtNTQ1Ny00M2I2LTljZTUtY2I3NTVjOTdiYzBhLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA4MjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwODIyVDEyNTI1NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTc0MDVjZmUwN2E1NTk1NWM5MmJjNDM0Yjk4ZjBhNThhMDBhMTI5MWRlYWE0NjNhOGJkNGQ5YmE1OWU4OTc3NzMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.K7cUDQuqrWMI3OQwb5sLdkqxv4NOpMGo1tcXjGatNB0) for flexible discussion.
+- We create a [WeChat Group](https://github.com/GuHuangAI/DiffusionEdge/issues/17) for flexible discussion.
 Please use WeChat APP to scan the QR code.
 - 2023-12-09: The paper is accepted by **AAAI-2024**.
 - Upload the pretrained **first stage checkpoint** [download](https://github.com/GuHuangAI/DiffusionEdge/releases/download/v1.1/first_stage_total_320.pt).
